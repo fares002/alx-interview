@@ -1,5 +1,14 @@
 #!/usr/bin/python3
-from math import factorial
+
+
+def factorial(n):
+    """This function to find factorial of any number """
+    if n < 0:
+        return "factorial cannot be define for the negative number"
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
 
 
 def pascal(rows):
