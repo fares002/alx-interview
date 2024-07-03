@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""pascal trinagel """
 
 def factorial(n):
     """This function to find factorial of any number """
