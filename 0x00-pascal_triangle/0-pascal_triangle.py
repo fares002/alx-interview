@@ -1,25 +1,28 @@
 #!/usr/bin/python3
 """pascal trinagel """
 
-def factorial(n):
-    """This function to find factorial of any number """
-    if n < 0:
-        return "factorial cannot be define for the negative number"
-    result = 1
-    for i in range(1, n+1):
-        result *= i
-    return result
 
+def pascal_triangle(rows):
+    """
+    Generate Pascal's triangle up to the specified number of rows.
 
-def pascal(rows):
+    Parameters:
+    - rows (int): The number of rows to generate in the triangle.
+
+    Returns:
+    - list: A list of lists representing Pascal's triangle.
+
+    Example:
+    >>>pascal_triangle(5)
+    [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
     """
-    function thats print pascal tringle with ncr law
-    """
-    triangle = []
-    for n in range(rows):
+
+    triangle = [[1]]
+    for i in range(rows - 1):
+        temp = [0] + triangle[-1] + [0]
         row = []
-        for r in range(n+1):
-            ncr = factorial(n) // (factorial(r) * factorial(n-r))
-            row.append(ncr)
+        for j in range(len(triangle[-1]) + 1):
+            row.append(temp[j] + temp[j+1])
         triangle.append(row)
+
     return triangle
