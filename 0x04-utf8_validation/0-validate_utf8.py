@@ -1,4 +1,4 @@
-#!/usr/bin/env pyhton3
+#!/usr/bin/pyhton3
 """UTF-8 Validation"""
 
 
