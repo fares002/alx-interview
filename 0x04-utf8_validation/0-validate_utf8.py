@@ -5,7 +5,7 @@
 def validUTF8(data):
     """Determines if a given data set represents a valid UTF-8 encoding"""
     n_bytes = 0
-    
+
     for num in data:
         bin_rep = format(num, "08b")
         if n_bytes == 0:
